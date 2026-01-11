@@ -32,23 +32,33 @@ This project is part of the AI-400 course, Class 4. It demonstrates a complete T
 4. **Advanced Search**: technical skill to find tasks matching complex queries.
 5. **Markdown Reporter**: technical skill to output a formatted report of active tasks.
 
-## ⚙️ How to Run
+## ⚙️ How to Run (Using uv Package Manager)
 
 1. **Setup Environment**:
    ```bash
    uv sync
    ```
+
 2. **Run Tests**:
    ```bash
    uv run pytest
    ```
-3. **Start API Server**:
+
+3. **Start API Development Server**:
    ```bash
    uv run uvicorn main:app --reload
    ```
-4. **Run Local Demo**:
+   Server will be available at http://127.0.0.1:8000
+
+4. **Run Interactive Demo**:
    ```bash
-   uv run demo.py
+   uv run python demo.py
+   ```
+   (Make sure the API server is running first)
+
+5. **Production Server** (without auto-reload):
+   ```bash
+   uv run uvicorn main:app --host 0.0.0.0 --port 8000
    ```
 
 ## 📝 API Documentation

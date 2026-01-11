@@ -1,7 +1,7 @@
 [project]
 name = "task-manager"
 version = "0.1.0"
-description = "Add your description here"
+description = "Task Management API with Agent Skills"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
@@ -11,3 +11,8 @@ dependencies = [
     "sqlmodel>=0.0.31",
     "uvicorn>=0.40.0",
 ]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v"
