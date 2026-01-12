@@ -17,6 +17,17 @@ app = FastAPI(title="Task Management API", version="1.0.0", description="Task Ma
 def on_startup():
     create_db_and_tables()
 
+@app.get("/datetime")
+def get_current_datetime():
+    """
+    Get current server date and time.
+    """
+    current_time = datetime.now()
+    return {
+        "datetime": current_time.isoformat(),
+        "timestamp": current_time.timestamp()
+    }
+
 # ... existing endpoints ...
 
 @app.post("/skills/prioritize")
